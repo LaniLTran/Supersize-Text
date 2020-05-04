@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    app:contentInsetEnd="0dp"
+    app:contentInsetStart="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:hint="@string/hint_text"
+            android:textColor="@color/cursorColor"
+            android:background="@drawable/text_box"
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="12dp"
+            android:layout_marginHorizontal="8dp"
+            android:drawableEnd="@drawable/ic_clear_black_24dp"
+            android:textCursorDrawable="@color/cursorColor"
+            android:scrollHorizontally="true"
+            android:maxLines="1"
+            />
+
+    </LinearLayout>
+
+</androidx.appcompat.widget.Toolbar>

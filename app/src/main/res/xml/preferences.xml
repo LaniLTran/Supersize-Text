@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="Colors and Fonts">
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/font_family_entries"
+            android:entryValues="@array/font_family_values"
+            android:key="@string/font_family_key"
+            android:title="@string/font_family_title"
+            />
+
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/text_color_entries"
+            android:entryValues="@array/text_color_values"
+            android:key="@string/text_color_key"
+            android:title="@string/text_color_title"
+            />
+
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/bg_color_entries"
+            android:entryValues="@array/bg_color_values"
+            android:key="@string/bg_color_key"
+            android:title="@string/bg_color_title"
+            />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/swap_colors_key"
+            app:title="@string/swap_colors_title"
+            />
+    </PreferenceCategory>
+</PreferenceScreen>
