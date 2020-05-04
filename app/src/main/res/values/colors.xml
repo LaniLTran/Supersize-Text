@@ -5,9 +5,10 @@
 <!--    <color name="colorAccent">#80CBC4</color>-->
 <!--    <color name="cursorColor">#DDDDDD</color>-->
 <!--    <color name="boxColor">#4C5D65</color>-->
+
     <color name="colorPrimary">#212121</color>
     <color name="colorPrimaryDark">#000000</color>
-    <color name="colorAccent">#1DE9B6</color>
+    <color name="colorAccent">#ffff</color>
     <color name="cursorColor">#DDDDDD</color>
     <color name="boxColor">#424242</color>
 </resources>

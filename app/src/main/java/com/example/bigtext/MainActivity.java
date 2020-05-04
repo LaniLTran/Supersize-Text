@@ -5,7 +5,9 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.graphics.Rect;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -16,8 +18,6 @@ import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.preference.PreferenceManager;
@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
     TextView text;
     private Toolbar toolbar;
     SharedPreferences prefs;
-    SharedPreferences settingsPrefs;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -42,9 +41,6 @@ public class MainActivity extends AppCompatActivity {
         edit = (EditText)findViewById(R.id.edit_text);
         text = (TextView)findViewById(R.id.text_view);
         toolbar = (Toolbar) findViewById(R.id.app_bar);
-//        font = findViewById(R.id.font_family);
-//        colorText = findViewById(R.id.color_text);
-//        colorBg = findViewById(R.id.color_bg);
 
         // Set up Preference to store key-value pairs (see afterTextChanged)
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
@@ -54,6 +50,17 @@ public class MainActivity extends AppCompatActivity {
         text.setText(prefs.getString("autosave", ""));
 
         setSupportActionBar(toolbar);
+
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+
+//        String s = sharedPreferences.getString("font_family_key", null);
+//        Typeface fontFamily = Typeface.createFromAsset(getContext().getAssets(), "fonts/" + s);
+        String textColor = sharedPreferences.getString("text_color_key", "white");
+        String bgColor = sharedPreferences.getString("bg_color_key", "black");
+
+//        text.setTypeface(fontFamily);
+        text.setTextColor(Color.parseColor(textColor));
+        text.setBackgroundColor(Color.parseColor(bgColor));
 
         // Event listener for button click
         edit.setOnTouchListener(new View.OnTouchListener() {
@@ -99,13 +106,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
-    // Retrieve key-pair values from settings preferences
-//    private void setupSharedPreferences() {
-//        settingsPrefs = PreferenceManager.getDefaultSharedPreferences(this);
-//        settingsPrefs.registerOnSharedPreferenceChangeListener((SharedPreferences.OnSharedPreferenceChangeListener) this);
-//    }
-
 
     // Hide soft keyboard when tapping anywhere other than EditText
     @Override
@@ -157,12 +157,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.favorites_item:
-                startActivity(new Intent(this, FavoritesActivity.class));
-                return true;
-            case R.id.history_item:
-                startActivity(new Intent(this, HistoryActivity.class));
-                return true;
+//            case R.id.favorites_item:
+//                startActivity(new Intent(this, FavoritesActivity.class));
+//                return true;
+//            case R.id.history_item:
+//                startActivity(new Intent(this, HistoryActivity.class));
+//                return true;
             case R.id.settings_item:
                 startActivity(new Intent(this, SettingsActivity.class));
                 return true;
@@ -173,4 +173,5 @@ public class MainActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
 }

@@ -28,7 +28,6 @@
             android:background="@android:color/transparent"
             android:gravity="center"
             android:autoSizeTextType="uniform"
-            android:text="writing something"
             android:breakStrategy="balanced"
             android:hyphenationFrequency="none"
             android:autoSizeMaxTextSize="150sp"

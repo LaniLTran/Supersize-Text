@@ -2,7 +2,6 @@ package com.example.bigtext;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
 import android.os.Bundle;
 
 public class SettingsActivity extends AppCompatActivity {
@@ -18,5 +17,15 @@ public class SettingsActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle("Settings");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        if(findViewById(R.id.fragment_container) != null) {
+            if(savedInstanceState != null) {
+                return;
+            }
+            getFragmentManager()
+                    .beginTransaction()
+                    .add(R.id.fragment_container, new SettingsFragment())
+                    .commit();
+        }
     }
 }

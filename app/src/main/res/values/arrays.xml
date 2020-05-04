@@ -1,49 +1,4 @@
 <resources>
-    <!-- Font family entries and entry values -->
-    <string-array name="font_family_entries">
-        <item>Arial</item>
-        <item>Comic Sans MS</item>
-        <item>Times New Roman</item>
-    </string-array>
-    <array name="font_family_values">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-    </array>
-
-    <!-- Text color entries and entry values -->
-    <string-array name="text_color_entries">
-        <item>Black</item>
-        <item>White</item>
-        <item>Red</item>
-        <item>Blue</item>
-        <item>Green</item>
-    </string-array>
-    <array name="text_color_values">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-    </array>
-
-    <!-- Background color entries and entry values -->
-    <array name="bg_color_entries">
-        <item>Black</item>
-        <item>White</item>
-        <item>Red</item>
-        <item>Blue</item>
-        <item>Green</item>
-    </array>
-    <array name="bg_color_values">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-    </array>
-
-
     <!-- Reply Preference -->
     <string-array name="reply_entries">
         <item>Reply</item>

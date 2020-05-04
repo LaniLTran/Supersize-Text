@@ -10,9 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name=".SettingsActivity2"
-            android:label="@string/title_activity_settings2"></activity>
-        <activity
             android:name=".FavoritesActivity"
             android:parentActivityName=".MainActivity" />
         <activity
@@ -20,9 +17,15 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".SettingsActivity"
-            android:parentActivityName=".MainActivity" />
+            android:label="@string/action_settings"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
         <activity
             android:name=".MainActivity"
+            android:launchMode="singleTop"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
