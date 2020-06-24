@@ -1,15 +1,10 @@
 <resources>
-    <string name="app_name">Big Text</string>
+    <string name="app_name">Supersize Text</string>
     <string name="action_settings">Settings</string>
 
     <string name="hint_text">Enter Text</string>
 
-    <!-- Preferences (font family, text color, bg color, invert colors) -->
-    <string name="font_family_title">Font Family</string>
-    <string name="font_family_key">font_family_key</string>
-    <string name="font_family_default">Arial</string>
-    <string name="font_family_summary">Arial</string>
-
+    <!-- Preferences (text color, bg color) -->
     <string name="text_color_title">Font Color</string>
     <string name="text_color_key">text_color_key</string>
     <string name="text_color_value">text_color_value</string>
@@ -20,21 +15,6 @@
     <string name="bg_color_key">bg_color_key</string>
     <string name="bg_color_default">Black</string>
     <string name="bg_color_summary">Black</string>
-
-    <string name="swap_colors_title">Shake to swap colors</string>
-    <string name="swap_colors_key">swap_colors_key</string>
-
-    <!-- Font family entries and entry values -->
-    <string-array name="font_family_entries">
-        <item>Sans</item>
-        <item>Monospace</item>
-        <item>Serif</item>
-    </string-array>
-    <array name="font_family_values">
-        <item>Typeface.Normal</item>
-        <item>DroidSansMono.ttf</item>
-        <item>NotoSerif-Regular.ttf</item>
-    </array>
 
     <!-- Text color entries and entry values -->
     <string-array name="text_color_entries">
@@ -61,7 +41,7 @@
         <item>Green</item>
     </string-array>
     <string-array name="bg_color_values">
-        <item>#000000</item>
+        <item>black</item>
         <item>white</item>
         <item>red</item>
         <item>blue</item>

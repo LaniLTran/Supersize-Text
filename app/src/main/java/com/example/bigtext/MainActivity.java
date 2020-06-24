@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
         // Resize layout when soft keyboard appears
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE|WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
 
@@ -52,17 +53,14 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-
-//        String s = sharedPreferences.getString("font_family_key", null);
-//        Typeface fontFamily = Typeface.createFromAsset(getContext().getAssets(), "fonts/" + s);
+        
         String textColor = sharedPreferences.getString("text_color_key", "white");
         String bgColor = sharedPreferences.getString("bg_color_key", "black");
 
-//        text.setTypeface(fontFamily);
         text.setTextColor(Color.parseColor(textColor));
         text.setBackgroundColor(Color.parseColor(bgColor));
 
-        // Event listener for button click
+        // Event listener for clear button click
         edit.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {

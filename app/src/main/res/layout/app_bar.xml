@@ -30,6 +30,7 @@
             android:textCursorDrawable="@color/cursorColor"
             android:scrollHorizontally="true"
             android:maxLines="1"
+            android:inputType="textCapWords"
             />
 
     </LinearLayout>
