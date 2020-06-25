@@ -62,12 +62,14 @@ public class MainActivity extends AppCompatActivity {
 
         // Event listener for clear button click
         edit.setOnTouchListener(new View.OnTouchListener() {
+
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 if(event.getAction() == MotionEvent.ACTION_UP) {
-                    if(edit.getCompoundDrawables()[2]!=null){
-                        if(event.getX() >= (edit.getRight()- edit.getLeft() - edit.getCompoundDrawables()[2].getBounds().width())) {
+                    if(edit.getCompoundDrawables()[2] != null) {
+                        if(event.getRawX() >= (edit.getRight() - edit.getCompoundDrawables()[2].getBounds().width() - (2 * edit.getPaddingRight()))) {
                             edit.setText("");
+                            return true;
                         }
                     }
                 }
@@ -85,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 // Display clear button if EditText contains character(s) otherwise hide the button
-                if (edit.getText().length() > 0) {
+                if (s.length() > 0) {
                     edit.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_clear_black_24dp, 0);
                 } else {
                     edit.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
